@@ -90,7 +90,7 @@
             setTimeout(function(){
                 container.stop(true,true).removeAttr('style').addClass('ok');
                 $('body').removeClass(self.settings.bodyClass);
-            },time);
+            }, time);
         } else {
             alert('Access only 18 year or more.');
         }
