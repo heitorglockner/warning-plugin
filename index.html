@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title>Access only 18 years or more</title>
+</head>
+<body class="reading-warning">    
+    <div class="legal-warning">
+        <span class="warning-background"></span>
+        <div class="warning-main">
+            <div class="section-title">
+                Hello!
+            </div>
+            <div class="section-entry">
+                Access only 18 years or more.</i>
+            </div>
+            <div class="warning-form">
+                <form action="#" enctype="multipart/form-data" method="post" class="warning-form">
+                    <div class="form-group">
+                        <label class="warning-label">Qual a sua data de nascimento?</label>
+                        <input type="text" maxlength="2" required="required" placeholder="DD" class="date-field" name="dia">
+                        <input type="text" maxlength="2" required="required" placeholder="MM" class="date-field" name="mes">
+                        <input type="text" maxlength="4" required="required" placeholder="AAAA" class="date-field date-year" name="ano">
+                    </div>
+                    <div class="form-group">
+                        <a href="#" class="warning-cancel warning-button">Cancelar</a>
+                        <input type="submit" class="warning-submit warning-button" name="enviar" value="OK">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+    <script src="js/warning.js"></script>
+    <script type="text/javascript"> 
+        var form = $('.warning-form');
+                
+        $('.warning-main').warning({
+            container: $('.legal-warning'),
+            bodyClass: 'reading-warning',
+            fields: form.find('.date-field'),
+            error: form.find('.warning-error'),
+            form: form,
+            date: {
+                day: form.find('input[name="dia"]'),
+                month: form.find('input[name="mes"]'),
+                year: form.find('input[name="ano"]'),
+            },
+            submit: form.find('.warning-submit')
+        });
+    </script>
+</body>
+</html>
