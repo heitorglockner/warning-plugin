@@ -62,7 +62,12 @@
         submit.on('click', function (e) {
             e.preventDefault();
 
-            self.submit(self.age(date.year, date.month, date.day));
+            if (date.year.val().length == parseInt(date.year.attr('maxlength')) &&
+                date.month.val().length == parseInt(date.month.attr('maxlength')) &&
+                date.day.val().length == parseInt(date.day.attr('maxlength'))) {
+
+                self.submit(self.age(date.year, date.month, date.day));
+            }
         });
 
     }
