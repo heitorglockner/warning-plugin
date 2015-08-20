@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Warning-plugin by heitorglockner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,92 +9,83 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/warning.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
+</head>
+<body>
     <section class="page-header">
-      <h1 class="project-name">Warning-plugin</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/heitorglockner/warning-plugin" class="btn">View on GitHub</a>
-      <a href="https://github.com/heitorglockner/warning-plugin/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/heitorglockner/warning-plugin/tarball/master" class="btn">Download .tar.gz</a>
+        <h1 class="project-name">Warning-plugin</h1>
+        <h2 class="project-tagline"></h2>
+        <a href="https://github.com/heitorglockner/warning-plugin" class="btn">View on GitHub</a>
+        <a href="https://github.com/heitorglockner/warning-plugin/zipball/master" class="btn">Download .zip</a>
+        <a href="https://github.com/heitorglockner/warning-plugin/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
-    <section class="main-content">
-      <p>&lt;!DOCTYPE html&gt;
-
-</p>
-    
-    Access only 18 years or more
-
-<br>
-    <div>
-        
-        <div>
-            <div>
+    <div class="legal-warning">
+        <span class="warning-background"></span>
+        <div class="warning-main">
+            <div class="section-title">
                 Hello!
             </div>
-            <div>
-                Access only 18 years or more.
-            </div>
-            <div>
-                
-                    <div>
-                        What is your birthday date ?
-                        
-                        
-                        
+            <div class="warning-form">
+                <form action="#" enctype="multipart/form-data" method="post">
+                    <div class="form-group">
+                        <label class="warning-label">What is your birthday?</label>
+                        <input type="text" maxlength="2" required="required" placeholder="DD" class="date-field" name="dia">
+                        <input type="text" maxlength="2" required="required" placeholder="MM" class="date-field" name="mes">
+                        <input type="text" maxlength="4" required="required" placeholder="AAAA" class="date-field date-year" name="ano">
                     </div>
-                    <div>
-                        <a href="#">Cancel</a>
-                        
+                    <div class="warning-error">Error, you age not is valid.</div>
+                    <div class="form-group">
+                        <a href="http://github.com/heitorglockner" class="warning-cancel warning-button">Cancel</a>
+                        <input type="submit" class="warning-submit warning-button" name="enviar" value="OK">
                     </div>
-                
+                </form>
             </div>
         </div>
     </div>
 
-<pre><code>&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt; 
-&lt;script src="js/warning.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript"&gt; 
-    var form = $('.warning-form');
+    <div class="page-content" style="display: none; text-align: center; padding: 10%; font-size: 20px;">
+        Welcome to content.<br><br>
 
-    $('.warning-main').warning({
-        container: $('.legal-warning'),
-        bodyClass: 'reading-warning',
-        fields: form.find('.date-field'),
-        error: form.find('.warning-error'),
-        form: form,
-        date: {
-            day: form.find('input[name="dia"]'),
-            month: form.find('input[name="mes"]'),
-            year: form.find('input[name="ano"]'),
-        },
-        submit: form.find('.warning-submit')
-    });
-&lt;/script&gt;
-</code></pre>
+        <b>Clear cookies and show message.</b>
+    </div>
 
-<p>
-</p>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="javascript/warning.js"></script>
+    <script type="text/javascript"> 
+        var form = $('.warning-form');
 
-      <footer class="site-footer">
+        $('.warning-main').warning({
+            content: $('.page-content'),
+            container: $('.legal-warning'),
+            bodyClass: 'reading-warning',
+            fields: form.find('.date-field'),
+            error: form.find('.warning-error'),
+            form: form,
+            date: {
+                day: form.find('input[name="dia"]'),
+                month: form.find('input[name="mes"]'),
+                year: form.find('input[name="ano"]'),
+            },
+            submit: form.find('.warning-submit')
+        });
+    </script>
+
+    <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/heitorglockner/warning-plugin">Warning-plugin</a> is maintained by <a href="https://github.com/heitorglockner">heitorglockner</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
+    </footer>
 
-    </section>
-
-            <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-          <script type="text/javascript">
+    <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+        <script type="text/javascript">
             try {
-              var pageTracker = _gat._getTracker("UA-66576525-1");
+            var pageTracker = _gat._getTracker("UA-66576525-1");
             pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
+        } catch(err) {}
+    </script>
 
-  </body>
+</body>
 </html>

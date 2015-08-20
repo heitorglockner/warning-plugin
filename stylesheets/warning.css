@@ -2,12 +2,8 @@
 
 .legal-warning {
     display: block;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 50000;
+    clear: both;
 }
 
 .legal-warning.ok {
@@ -28,7 +24,7 @@
     color: #333;
     display: block;
     height: 33.1vw;
-    margin: -16.55vw auto 0;
+    margin: 5% auto;
     position: relative;
     text-align: center;
     top: 50%;
@@ -54,6 +50,15 @@
     margin: 0 auto;
     position: relative;
     width: 15.7vw;
+}
+
+.warning-error {
+    width: 130%;
+    position: absolute;
+    left: -15%;
+    font-size: 12px;
+    margin-top: 16px;
+    display: none;
 }
 
 .form-group {
@@ -121,7 +126,7 @@ label.warning-label {
 }
 
 .warning-submit {
-    background: none no-repeat scroll 0 0 #e70a60;
+    background: none no-repeat scroll 0 0 #000;
     border: medium none;
     border-radius: 0;
     -moz-border-radius: 0;
